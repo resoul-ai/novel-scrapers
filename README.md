@@ -22,7 +22,7 @@ uv pip install -e .
 
 Downloading `Traveler` from Fanfiction.net
 ```
-python -m novel_scrapers download --site "fichub" --novel-name "Traveler" --novel-url "https://www.fanfiction.net/s/8466693/1/Traveler" --output-dir "/home/arelius/books/Traveler"
+python -m novel_scrapers download --provider "fichub" --novel-name "Traveler" --novel-url "https://www.fanfiction.net/s/8466693/1/Traveler" --output-dir "/home/arelius/books/Traveler"
 ```
 
 Credit:
