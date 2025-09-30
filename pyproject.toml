@@ -1,10 +1,20 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
 [project]
 name = "novel-scrapers"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.10.0"
-dependencies = ["requests", "fichub-cli", "click", "beautifulsoup4"]
+dependencies = [
+    "requests",
+    "fichub-cli",
+    "click",
+    "beautifulsoup4",
+    "epub2txt>=0.1.6",
+]
 
 [tool.setuptools.dynamic]
 version = { file = "src/novel_scrapers/VERSION.txt" }
@@ -15,6 +25,9 @@ dev = ["pytest", "black", "flake8", "mypy"]
 [tool.setuptools]
 zip-safe = true
 include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["src"]
 
 [tool.isort]
 profile = "black"
